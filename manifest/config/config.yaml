@@ -20,15 +20,15 @@ database:
     stdout: true
   default:
     type: "mysql"
-    link: "root:123456@tcp(127.0.0.1:3306)/chat?loc=Local&parseTime=true"
+    link: "root:d1ba0893@tcp(gr2d3539:3306)/Initialize?loc=Local&parseTime=true"
     debug: true
     charset: "utf8mb4"
 redis:
   # 单实例配置示例1
   default:
-    address: 127.0.0.1:6379
+    address: grcd99fc:6379
     pass:
-    db: 6
+    db: 1
 logger:
   path:    "./storage/log"
   level:   "all"
@@ -41,7 +41,8 @@ grpc:
   accessLogEnabled: true
   errorStack:       true
 etcd:
-  host: "127.0.0.1:2379@root:123456"
+    host: ""
+  # host: "127.0.0.1:2379@root:123456"
 websocket:
   logger:
     path: "./storage/sql"
